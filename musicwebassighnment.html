@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myspotify</title>
+      <script src="https://kit.fontawesome.com/59e227fa68.js" crossorigin="anonymous"></script>
+    <style>
+      *{margin: 0; padding: 0;}
+      #sectionone{height: 80px; width: 100%; background: black;}
+      .fa-brands-fa-spotify{height: 20px; width: 3%;
+                                      color: white; margin-left: 100px;
+                                      margin-top: 50;}
+      #sectionone .sitename{margin-left: 150px; width: 10%; padding-top: 20px; margin-top: 20px;}
+      nav{border-bottom: 15px; margin-left: 800px; width: 30%;}
+      .menu ul{list-style-type: none; padding-left: 0; }
+      .menu{display: inline-block;}
+      .menu font{text-decoration: none; margin-left: 10px;}
+      #sectionone .signinandup{}
+      #sectiontwo{background: blue; height: 400px; width: 100%; margin-top: 0px;}
+      #musicicons{height: 140px; width: 80%; border: none; }
+      .sectiontwo-items{margin-left: 90px; height:300px; width: 80%; padding-top: 80px;}
+      .download{height: 130px; width: 12%; border-radius: 70px; border: none;
+                background: lightGrey; margin-left: -940px; margin-bottom: }
+        .listening{height: 130px; width: 12%; border-radius: 70px; border: none;
+                  background: lightGrey; margin-left: -300px; margin-top: -130px;}
+          .song{height: 130px; width: 12%; border-radius: 70px; border: none;
+                    background: lightGrey; margin-left: 320px; margin-top: -130px;}
+            .skips{height: 130px; width: 12%; border-radius: 70px; border: none;
+                      background: lightGrey; margin-left: 940px; margin-top: -130px;}
+      #iconlabels{height: 120px; width: 100%; border: none; }
+        .labelone{margin-left: -900px;}
+          .labeltwo{margin-left: -300px; margin-top: -65px}
+            .labelthree{margin-left: 300px; margin-top: -65px}
+              .labelfour{margin-left: 900px; margin-top: -65px}
+      #lowerpart{height: 900px; background: lightGrey; width: 100%; margin-top: 150px;}
+      .lowerpartlabel{height: 110px; width: 35%; margin-top: 80px; padding-top: 70px;}
+      #bannerone{margin-top: -665px; padding-top:; margin-left: 90px; width: 20%;
+          height: 550px; background-color: ivory; border-radius: 10px; box-shadow: 1px 1px 1px 1px #969696;}
+          #bannerone .container{background: inherit; padding-top:; width: 82%;
+          margin-left: 18px; border: none;
+          height: 500px; margin-top: -5px;}
+          #bannerone .tagone{background: blue; padding-top:; width: 100%;
+           border-radius: 5px; border: none;
+          height: 23px; margin-top:}
+          #bannerone .tagtwo{background: inherit; padding-top:; width: 80%;
+          border-radius: 5px; border: 1px solid blue;
+          height: 23px; margin-top: -5px;}
+          #bannerone .addons ul{list-style-type: none;}
+          #bannerone button font:hover{color: green;}
+      #bannertwo{margin-top: -550px; padding-top:; margin-left: 90px; width: 20%;
+          height: 550px; background-color: ivory; border-radius: 10px;
+          margin-left: 375px; box-shadow: 1px 1px 1px 1px #969696;}
+          #bannertwo .container{background: inherit; padding-top:; width: 82%;
+          margin-left: 18px; border: none;
+          height: 500px; margin-top: -5px;}
+          #bannertwo .tagone{background: blue; padding-top:; width: 44%;
+           border-radius: 5px; border: none;
+          height: 23px; margin-top:}
+          #bannertwo .addons ul{list-style-type: none;}
+      #bannerthree{margin-top: -549px; padding-top:; margin-left: 90px; width: 20%;
+          height: 550px; background-color: ivory; border-radius: 10px;
+          margin-left: 661px; box-shadow: 1px 1px 1px 1px #969696;}
+          #bannerthree .container{background: inherit; padding-top:; width: 82%;
+          margin-left: 18px; border: none;
+          height: 500px; margin-top: -5px;}
+          #bannerthree .tagone{background: blue; padding-top:; width: 44%;
+           border-radius: 5px; border: none;
+          height: 23px; margin-top:}
+          #bannerthree .addons ul{list-style-type: none;}
+      #bannerfour{margin-top: -550px; padding-top:; margin-left: 90px; width: 20%;
+          height: 550px; background-color: ivory; border-radius: 10px;
+          margin-left: 948px; box-shadow: 1px 1px 1px 1px #969696;}
+          #bannerfour .container{background: inherit; padding-top:; width: 82%;
+          margin-left: 18px; border: none;
+          height: 500px; margin-top: -5px;}
+          #bannerfour .tagone{background: blue; padding-top:; width: 100%;
+           border-radius: 5px; border: none;
+          height: 23px; margin-top:}
+          #bannerfour .tagtwo{background: inherit; padding-top:; width: 80%;
+          border-radius: 5px; border: 1px solid blue;
+          height: 23px; margin-top: -5px;}
+          #bannerfour .addons ul{list-style-type: none;}
+      footer{height: 530px; width: 100%; background: black; margin-top: 95px;}
+      .columnone{display: block; margin-left: 300px; height: auto; width: auto; margin-top: 80px;}
+      .columntwo{display: block; margin-left: 500px; height: auto; width: auto; margin-top: -180px;}
+      .columnthree{display: block; margin-left: 700px; height: auto; width: auto; margin-top: -288px;}
+      #mediahandles{height: 60px; width: 16%; margin-left: 1020px; margin-top: -175px; background: inherit;}
+      .Instagram{background: #303030; height: 53px; width: 25%; border-radius: 60px;}
+        .Twitter{background: #303030; height: 53px; width: 25%; border-radius: 60px; margin-left: 70px; margin-top: -53px;}
+          .Facebook{background: #303030; height: 53px; width: 25%; border-radius: 60px; margin-left: 140px; margin-top: -53px;}
+          .bottomlist{margin-left: 100px; width: 600px; margin-top: 285px;}
+          .bottomlist ul{list-style-type: none; padding-left: 0; }
+          .bottomlist .menu{display: inline-block;}
+          .bottomlist .menu ul li{text-align: center; width: 20px; overflow: hidden; float: left;}
+          .bottomlist ul a{text-decoration: none; display: block;}
+          .bottomlist font{color: yellowgreen; transition:1s; margin-left: 5px;}
+          .bottomlist font:hover{color: red;}
+    </style>
+  </head>
+  <body>
+    <div id="sectionone">
+        <i class="fa-brands fa-spotify"></i>
+      <div class="sitename">
+        <h3>
+        <font color="white">Spotify</font>
+      </h3>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li class="menu"><a href="?"><font color="white"> Premium </font> </a></li>
+          <li class="menu"><a href="?"><font color="white"> Support</font></a></li>
+          <li class="menu"><a href="?"><font color="white"> Download</font></a></li>
+        </ul>
+      </nav>
+      <div class="signinandup"></div>
+    </div>
+    <div id="sectiontwo">
+      <div class="sectiontwo-items">
+      <p>
+        <h2><font color="white" size="7">Get Premium free for 1 month </font></h2>
+      </p>
+      <br>
+      <br>
+      <p>
+      <h3><font color="white" size="6">Just # 900/month after. Cancel anytime.</font></h3>
+    </p>
+    <br>
+    <br>
+    <button style="height: 48px; width: 13%; background: black; border-radius: 22px;
+    border: none;"><font color="white">
+      <strong>GET STARTED</strong>
+    </font></button>
+    <button style="height: 48px; width: 13%; background: inherit; border-radius: 22px;
+    border: 2px solid white;"><font color="white">
+      <strong>VIEW PLANS</strong>
+    </font></button>
+    <br>
+    <br>
+    <br>
+    <p>
+    <a href="?" style="color:white;"> <font size="1">Terms and conditions apply.</font></a>
+    <font size="1" color="white">1 month free not availbale for users who have already tried Premium.</font>
+  </p>
+  </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <center><h1> <font size="7"> Why Go Premium?</font></h1></center>
+    <br>
+    <br>
+    <center>
+      <div id="musicicons">
+      <div class="download">
+        <i class="fa-sharp fa-solid fa-music"></i>
+      </div>
+      <div class="listening"></div>
+      <div class="song"></div>
+      <div class="skips"></div><br>
+      <div id="iconlabels">
+        <div class="labelone">
+          <font size="5"><b>Download Music.</b></font><br>
+          <br>
+          <font size="4">Listen anywhere.</font>
+        </div>
+        <div class="labeltwo">
+          <font size="5"><b>Ad-free music listening.</b></font><br>
+          <br>
+          <font size="4">Enjoy uninterrupted listening.</font>
+        </div>
+        <div class="labelthree">
+          <font size="5"><b>Play and Song.</b></font><br>
+          <br>
+          <font size="4">Even on mibile.</font>
+        </div>
+        <div class="labelfour">
+          <font size="5"><b>Unlimited Skips.</b></font><br>
+          <br>
+          <font size="4">Just hit next.</font>
+        </div>
+      </div>
+    </div>
+  </center>
+  <br>
+  <div id="lowerpart">
+    <center>
+    <div class="lowerpartlabel">
+        <h1> <font size="7"> Pick your Premium</font></h1>
+        <br>
+        <font size="4">Listen without limits on your phone, speaker, and other devices.</font>
+      </center><br>
+    </div>
+    <div id="bannerone">
+      <div class="container">
+        <br>
+      <div class="tagone">
+        <center>
+          <font color="white"><b>1 month free with subscription</b></font>
+        </center>
+              </div>
+              <br>
+              <div class="tagtwo">
+                <center>
+                  <font color="blue"><b>Prepaid plans available</b></font>
+                </center>
+              </div>
+              <br>
+              <Strong><font size="5"> Individual</font></strong><br>
+              # 900/month after offer period
+              <br>
+              1 account
+              <br>
+              <br>
+              <hr style="width:100%; height: 1px solid;">
+              <br>
+              <div class="addons">
+              <ul>
+                <li>Ad-free music listening</li><br>
+                <li>Play anywhere - even<br>
+                offline</li><br>
+                <li>On-demand playback</li>
+              </ul>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button style="height: 48px; width: 100%; background: black; border-radius: 22px;
+            border: none; ">
+              <font color="white"><b>GET STARTED</b></font>
+            </button>
+            <br>
+            <br>
+            <a href="?" style="text-decoration: underline; color: black;"><font size="2">
+              Terms and conditions apply.</a> 1 month free<br>
+              not available for users who have already<br>
+              tried Premium.</font>
+            </div>
+    </div>
+    <div id="bannertwo">
+      <div class="container">
+        <br>
+      <div class="tagone">
+        <center>
+          <font color="white"><b>1 month free</b></font>
+        </center>
+              </div>
+              <Strong><font size="5"> Duo</font></strong><br>
+              # 1,200/month after offer period
+              <br>
+              2 accounts
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <hr style="width:100%; height: 1px solid;">
+              <br>
+              <div class="addons">
+              <ul>
+                <li>2 Premium accounts for a<br>
+                    couple under one roof</li><br>
+                <li>Ad-free music listening,<br>
+                    play offline on-demand<br>
+                    playback</li><br>
+              </ul>
+            </div>
+            <br>
+            <br>
+            <br>
+            <button style="height: 48px; width: 100%; background: black; border-radius: 22px;
+            border: none; ">
+              <font color="white"><b>GET STARTED</b></font>
+            </button>
+            <br>
+            <br>
+            <a href="?" style="text-decoration: underline; color: black;"><font size="2">
+              Terms and conditions apply.</a> 1 month free<br>
+              not available for users who have already<br>
+              tried Premium.</font>
+            </div>
+    </div>
+    <div id="bannerthree">
+      <div class="container">
+        <br>
+      <div class="tagone">
+        <center>
+          <font color="white"><b>1 month free</b></font>
+        </center>
+              </div>
+              <Strong><font size="5"> Family</font></strong><br>
+              # 1,400/month after offer period
+              <br>
+              Up to 6 accounts
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <hr style="width:100%; height: 1px solid;">
+              <br>
+              <div class="addons">
+              <ul>
+                <li>6 Premium accounts for <br>
+                    family members living<br>
+                    under one roof</li><br>
+                <li>Block explicit music</li><br>
+                <li>Ad-free music listening,<br>
+                    play offline on-demand<br>
+                    playback</li><br>
+              </ul>
+            </div>
+            <button style="height: 48px; width: 100%; background: black; border-radius: 22px;
+            border: none; ">
+              <font color="white"><b>GET STARTED</b></font>
+            </button>
+            <br>
+            <br>
+            <a href="?" style="text-decoration: underline; color: black;"><font size="2">
+              Terms and conditions apply.</a> 1 month free<br>
+              not available for users who have already<br>
+              tried Premium.</font>
+            </div>
+    </div>
+    <div id="bannerfour">
+      <div class="container">
+        <br>
+      <div class="tagone">
+        <center>
+          <font color="white"><b>1 month free with subscription</b></font>
+        </center>
+              </div>
+              <br>
+              <div class="tagtwo">
+                <center>
+                  <font color="blue"><b>Prepaid plans available</b></font>
+                </center>
+              </div>
+              <br>
+              <Strong><font size="5"> Student</font></strong><br>
+              # 450/month after offer period
+              <br>
+              1 account
+              <br>
+              <br>
+              <hr style="width:100%; height: 1px solid;">
+              <br>
+              <div class="addons">
+              <ul>
+                <li>Special Discount for eligible<br>
+                  students in university<li><br>
+                <li>Ad-free music listening</li><br>
+                <li>Play anywhere - even<br>
+                offline</li><br>
+                <li>On-demand playback</li>
+              </ul>
+            </div>
+            <br>
+            <button style="height: 48px; width: 100%; background: black; border-radius: 22px;
+            border: none; ">
+              <font color="white"><b>GET STARTED</b></font>
+            </button>
+            <br>
+            <br>
+            <a href="?" style="text-decoration: underline; color: black;"><font size="2">
+              Terms and conditions apply.</a> 1 month free<br>
+              not available for users who have already<br>
+              tried Premium.</font>
+            </div>
+    </div>
+  </div>
+  <br>
+  <footer>
+    <i class="fa-brands fa-spotify" style="margin-left:;"></i><h3><font color="white">Spotify</font></h3>
+    <nav class="columnone">
+      <font color="silver" size="2"><b>COMPANY</b></font>
+      <br>
+      <br>
+      <br>
+      <a href="?" style="text-decoration: none;"><font color="white">About </font></a>
+      <br>
+      <br>
+      <br>
+      <a href="?" style="text-decoration: none;"> <font color="white"> Jobs <font></a>
+        <br>
+        <br>
+        <br>
+      <a href="?" style="text-decoration: none"> <font color="white">For the Record</font></a>
+    </nav>
+    <nav class="columntwo">
+      <font color="silver" size="2"><b>COMMUNITIES</b></font>
+      <br>
+      <br>
+      <br>
+      <a href="?" style="text-decoration: none;"><font color="white">For Artists </font></a>
+      <br>
+      <br>
+      <br>
+      <a href="?" style="text-decoration: none;"> <font color="white">Developers <font></a>
+        <br>
+        <br>
+        <br>
+      <a href="?" style="text-decoration: none"> <font color="white">Advertising</font></a>
+      <br>
+      <br>
+      <br>
+      <a href="?" style="text-decoration: none;"><font color="white">Investors </font></a>
+      <br>
+      <br>
+      <br>
+      <a href="?" style="text-decoration: none;"> <font color="white">Vendors <font></a>
+    </nav>
+    <nav class="columnthree">
+      <font color="silver" size="2"><b>USEFUL LINKS</b></font>
+      <br>
+      <br>
+      <br>
+      <a href="?" style="text-decoration: none;"><font color="white">Support </font></a>
+      <br>
+      <br>
+      <br>
+      <a href="?" style="text-decoration: none;"> <font color="white">Web Player <font></a>
+        <br>
+        <br>
+        <br>
+      <a href="?" style="text-decoration: none"> <font color="white">Free Mobile App</font></a>
+    </nav>
+    <div id="mediahandles">
+      <div class="Instagram">
+        <center>
+          <span class="fa-brands fa-instagram" style="color: white; position:absolute;"></span>
+        </center>
+        </div>
+      <div class="Twitter">
+        <center>
+          <i class="fa-brands fa-twitter" style="color: white;"></i>
+        </center>
+      </div>
+      <div class="Facebook">
+        <center>
+          <i class="fa-brands fa-facebook-f" style="color: white;"></i>
+        </center>
+      </div>
+    </div>
+    <nav class="bottomlist">
+      <ul>
+        <li class="menu" ><a href="?"><font color="silver" size="2"> Legal </font> </a></li>
+        <li class="menu"><a href="?"><font color="silver" size="2"> Privacy Center</font></a></li>
+        <li class="menu"><a href="?"><font color="silver" size="2"> Privacy Policy</font></a></li>
+        <li class="menu"><a href="?"><font color="silver" size="2"> Cookies</font></a></li>
+        <li class="menu"><a href="?"><font color="silver" size="2"> About Ads</font></a></li>
+      </ul>
+    </nav>
+  </footer>
+    </body>
+    </html>
